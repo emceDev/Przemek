@@ -5,8 +5,8 @@ const style = { backgroundColor: "red" };
 export const Logo = (props) => {
 	return (
 		<div className="Logo">
-			<h1>JPD systems</h1>
-			<Navigation />
+			<h1>JPD system</h1>
+
 			<ImgHolder src="/miernik.svg" className="LogoImg" />
 		</div>
 	);

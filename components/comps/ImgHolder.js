@@ -4,10 +4,12 @@ export const ImgHolder = (props) => {
 		<div
 			style={{
 				position: "absolute",
+				zIndex: "-1000",
 				top: "0px",
 				left: "0px",
 				width: "100%",
 				height: "100%",
+				overflow: "visible",
 			}}
 		>
 			<div
@@ -16,7 +18,7 @@ export const ImgHolder = (props) => {
 					position: "absolute",
 				}}
 			>
-				<Image src={props.src} layout="fill" />
+				<Image src={props.src} layout="fill" alt={props.className} />
 			</div>
 		</div>
 	);

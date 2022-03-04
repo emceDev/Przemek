@@ -1,23 +1,37 @@
 import { Offerie } from "./comps/Offerie";
 import { ImgHolder } from "./comps/ImgHolder";
 const offer = [
+	{ title: "Smart Domy", desc: "Zajmujemy się instalacjami smart dom." },
 	{
-		title: "Instalacja oświetlenia",
-		desc: "Potrzebny Ci ktoś, kto pomoże w naprawie lub remoncie instalacji elektrycznej itp? Instalacja oświetlenia oraz prace z tym związane to mój konik. Gwarantuję doskonałe efekty. Niezależnie od projektu jestem gotowy do pomocy. Zadzwoń do mnie, aby umówić się na spotkanie i otrzymać bezpłatną wycenę. Odpowiem również na wszelkie pytania dotyczące tego, jak pracuję i czego się spodziewać podczas mojej wizyty.",
+		title: "Usuwanie awarii 24H/7",
+		desc: "Usuwanie awarii elektrycznych w domach jedno oraz wielo-rodzinnych",
 	},
 	{
-		title: "Naprawa gniazdek",
-		desc: "Naprawa gniazdek oraz włączników to coś, co spędza Ci sen z powiek? Zrobię to za Ciebie! Dostarczę materiały i pracowników do każdego projektu, więc Naprawa  przestanie być problemem. Prowadzę prace naprawcze i instalacyjne , korzystając ze swojego bogatego doświadczenia i umiejętności technicznych, aby zapewnić Ci najlepszą obsługę z możliwych. Skontaktuj się ze mną, aby uzyskać więcej informacji lub umówić się na spotkanie.",
+		title: "CCTV is systemy alarmowe",
+		desc: "kompleksowa instalacja oraz konfiguracja systemów CCTV oraz instalacji alarmowych, kontroli dostępu",
+	},
+
+	{
+		title: "Montaż oraz serwis domofonów i wideo domofonów",
+		desc: "Posiadamy duże doświadczenie przy pracy z domofonami, zarówno instalacją jak i konfiguracją",
+	},
+	{
+		title: "Zakładanie oraz remont instalacji elektrycznej",
+		desc: "Montaż urządzeń elektrycznych, biały montaż, przyłącza, Pomiary elektryczne, instalacje odgromowye",
+	},
+	{
+		title: "Naprawy oraz instalacje",
+		desc: "podłączanie płyt indukcyjnych Naprawa gniazdek oraz włączników",
 	},
 ];
 export const Offer = () => {
 	return (
-		<div className="Offer">
+		<div id="Offer" className="Offer">
 			<ImgHolder src="/miernik.svg" className="OfferImg" />
-			<h1 className="Heading">Oferta</h1>
+			<h1 className="Heading">Usługi elektryczne</h1>
 			<div>
 				{offer.map((x) => {
-					return <Offerie title={x.title} desc={x.desc} />;
+					return <Offerie title={x.title} desc={x.desc} key={x.title} />;
 				})}
 			</div>
 		</div>

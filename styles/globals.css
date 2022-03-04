@@ -1,15 +1,18 @@
 * {
-	font-family: Roboto;
+	/* font-family: Roboto; */
+	font-family: Oxygen;
 	margin: 0px;
-	overflow-x: hidden;
+	/* overflow-x: hidden;
+	overflow-y: scroll; */
 }
 .Home {
 	min-height: 100vh;
 	min-width: 100vw;
 }
 .Heading {
-	font-family: monospace;
-	font-weight: 900;
+	/* font-family: monospace; */
+
+	font-weight: 700;
 	font-size: 96px;
 	line-height: 112px;
 }
@@ -23,56 +26,113 @@
 	align-items: center;
 	text-align: center;
 }
+.Logo * {
+	font-family: monospace;
+}
 .Logo {
 	position: relative;
 	color: #264eff;
 	font-size: 4vw;
-	padding-left: 5vw;
+	height: 45vh;
 	padding-top: 20vh;
-	padding-bottom: 25vh;
+	width: 80vw;
+	/* background-color: green; */
+	/* padding-left: 5vw;
+	padding-bottom: 25vh; */
 	overflow: visible;
 }
-.Logo * {
-	font-family: monospace;
+.Logo h1 {
+	margin-left: 5vw;
+	/* margin-top: 10vh; */
+	/* background-color: blue; */
 }
+
 .LogoImg {
 	position: absolute;
+	z-index: -100;
 	top: 0%;
 	width: 50%;
 	height: 100%;
 	left: 50%;
 }
 .Navigation {
-	font-size: 3vw;
+	/* width: 70vw; */
+	position: sticky;
+	top: 10px;
+	/* background-color: yellow; */
+	z-index: 1000;
+	font-size: 30px;
+	font-weight: bolder;
+	color: #266dd3;
+	min-height: 5vh;
 	display: flex;
-	width: 50vw;
+	width: fit-content;
+	margin-top: 10vh;
+	padding-left: 4vw;
 	justify-content: space-evenly;
+}
+.Navigation a {
+	/* color: red; */
+	color: #266dd3;
+	text-decoration: none;
+}
+.Navigation a:visited {
+	color: #266dd3;
+}
+.Navigation div {
+	margin-left: 0.5vw;
+	padding: 1vw;
+	background-color: #68cde1ad;
 }
 .About {
 	position: relative;
 	height: auto;
 	width: 100vw;
-	height: 100vh;
 	color: white;
-	/* background-color: blue; */
 	background-image: linear-gradient(#2facff, #264eff);
-	clip-path: polygon(0 0, 100vw 17vh, 100% 100%, 0 96vh);
+	clip-path: polygon(0 0, 100vw 17vh, 100% 100%, 0 96%);
 	padding-top: 25vh;
+	padding-bottom: 10vh;
 }
 .About .Heading {
 	padding-left: 7vw;
 }
-.About p {
+.TContainer {
 	font-size: 19px;
-	padding: 9vh 50% 6vh 10vw;
+	/* padding: 9vh 40% 6vh 3vw; */
 	font-weight: bold;
+	/* background-color: green; */
+}
+.Thingie {
+	/* background-color: red; */
+	padding-bottom: 10vh;
+	width: 100vw;
+	display: flex;
+}
+.TTitle {
+	padding: 2vh 2vw 5vh 6vw;
+	/* background-color: violet; */
+	max-width: 50vw;
+}
+.TDesc {
+	padding: 3vh 7vw 1vh 10vw;
+	width: 32vw;
+	/* max-width: 50%; */
+	line-height: 125%;
+	font-size: 2.3vw;
+	/* background-color: aquamarine; */
+}
+.TImg {
+	/* background-color: orange; */
+	width: 50%;
+	position: relative;
 }
 .AboutImg {
 	position: absolute;
 	top: 0%;
-	width: 50%;
+	width: 30%;
 	height: 100%;
-	left: 50%;
+	left: 60%;
 }
 .Offer {
 	position: relative;
@@ -81,24 +141,27 @@
 	padding-bottom: 10vh;
 	color: #264eff;
 }
+.Offer h1 {
+	font-size: 5.2vw;
+}
 .Offerie {
-	padding-top: 5vh;
+	padding: 2vh;
 }
 .OfferieHead {
-	font-size: 4vw;
+	font-size: 3.5vw;
 	line-height: 10vh;
 	width: fit-content;
-	background-color: rgba(255, 255, 255, 0.863);
+	background-color: rgb(220 210 210 / 94%);
 	z-index: 1000;
-	padding: 1%;
+	margin-bottom: 1vh;
 }
 .OfferieDesc {
 	color: #266dd3;
-	padding-left: 4vw;
-	padding-right: 5vw;
-	font-weight: 100;
-	font-size: 2vw;
-	background-color: rgba(255, 255, 255, 0.98);
+	padding: 2vh 5vw 2vh 5vw;
+	line-height: 120%;
+	font-size: 2.3vw;
+	font-weight: 700;
+	background-color: rgb(220 210 210 / 94%);
 	/* filter: drop-shadow(1px 1px 1px rgb(58, 57, 57)); */
 }
 .OfferImg {
@@ -157,33 +220,77 @@
 		font-size: 4vw;
 		padding-bottom: 5vh;
 		padding-top: 6vh;
+		margin-bottom: 10vh;
+		overflow-y: visible;
+		min-height: 28vh;
+		height: auto;
 	}
 	.Logo h1 {
 		width: 100%;
 		font-size: 15vw;
+		background-color: #fffffff6;
 	}
 	.LogoImg {
-		left: 58%;
-		top: 15%;
-		height: 70%;
+		/* background-color: red; */
+		left: 0%;
+		top: 0%;
+		width: 100vw;
+		height: 55vh;
 		z-index: -1000;
 	}
 	.Navigation {
-		padding-top: 5vh;
-		font-size: 4vw;
+		padding-left: 0%;
+		min-height: fit-content;
+		font-size: 5vw;
+		font-weight: 900;
+		width: 100vw;
+		/* background-color: red; */
+	}
+	.Navigation div {
+		padding: 2vh 1vw 2vh 1vw;
+		background-color: #fffffff6;
 	}
 	.About {
-		clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 90%);
-		padding-top: 10vh;
-		padding-bottom: 0vh;
-		height: 70vh;
+		clip-path: polygon(0 0, 100% 13vh, 100% 100%, 0 90%);
+		padding-bottom: 10vh;
+		padding-top: 17vh;
 	}
-	.About p {
-		padding: 10% 50% 0% 5%;
+
+	.TContainer {
+		padding: 1vh 0% 6vh 3vw;
+		font-weight: bold;
+		flex-direction: column;
+		align-items: center;
+		background-color: green;
 	}
-	.AboutImg {
-		height: 50%;
-		top: 20%;
+	.Thingie {
+		background-color: olive;
+		/* background-image: linear-gradient(#2facff, #264eff); */
+		padding-bottom: 4vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.TTitle {
+		font-size: 7vw;
+		padding: 2vh 2vw 2vh 2vw;
+		max-width: 100%;
+		text-align: center;
+		background-color: violet;
+	}
+	.TDesc {
+		padding: 3vh 7vw 1vh 7vw;
+		line-height: 125%;
+		font-size: 4.3vw;
+		width: 50%;
+		margin: 0 auto;
+		text-align: center;
+		background-color: aquamarine;
+	}
+	.TImg {
+		height: 40vh;
+		width: 100vw;
 	}
 	.Offer {
 		min-height: auto;

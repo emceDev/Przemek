@@ -40,7 +40,7 @@ const realisations = [
 ];
 export const Projects = () => {
 	return (
-		<div className="Projects">
+		<div id="Projects" className="Projects">
 			<h1 className="Heading">Projekty:</h1>
 
 			<Carousel itemsToShow={1} outerSpacing={0}>
@@ -56,7 +56,7 @@ const Project = (id, title, description, image) => {
 	return (
 		<div id={id} className="Project">
 			<div className="ProjectImgContainer">
-				<Image src={image} layout="fill" />
+				<Image src={image} layout="fill" alt={title} />
 			</div>
 			<div className="ProjectContent">
 				<h4 style={{ zIndex: "100", position: "relative" }}>{title}</h4>
