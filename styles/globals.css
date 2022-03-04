@@ -261,10 +261,10 @@
 		font-weight: bold;
 		flex-direction: column;
 		align-items: center;
-		background-color: green;
+		/* background-color: green; */
 	}
 	.Thingie {
-		background-color: olive;
+		/* background-color: olive; */
 		/* background-image: linear-gradient(#2facff, #264eff); */
 		padding-bottom: 4vh;
 		display: flex;
@@ -277,7 +277,7 @@
 		padding: 2vh 2vw 2vh 2vw;
 		max-width: 100%;
 		text-align: center;
-		background-color: violet;
+		/* background-color: violet; */
 	}
 	.TDesc {
 		padding: 3vh 7vw 1vh 7vw;
@@ -286,7 +286,7 @@
 		width: 50%;
 		margin: 0 auto;
 		text-align: center;
-		background-color: aquamarine;
+		/* background-color: aquamarine; */
 	}
 	.TImg {
 		height: 40vh;
@@ -340,7 +340,7 @@
 		margin-bottom: 0px;
 	}
 	.ProjectImgContainer span {
-		background-color: brown;
+		/* background-color: brown; */
 		padding: 0%;
 		margin-top: auto;
 		min-height: 100%;
