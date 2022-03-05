@@ -26,6 +26,10 @@
 	align-items: center;
 	text-align: center;
 }
+
+body {
+	background-color: rgb(220 210 210 / 94%);
+}
 .Logo * {
 	font-family: monospace;
 }

@@ -54,7 +54,7 @@ export const Projects = () => {
 
 const Project = (id, title, description, image) => {
 	return (
-		<div id={id} className="Project">
+		<div id={id} key={id} className="Project">
 			<div className="ProjectImgContainer">
 				<Image src={image} layout="fill" alt={title} />
 			</div>
