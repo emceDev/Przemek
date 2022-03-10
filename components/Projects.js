@@ -7,21 +7,21 @@ const realisations = [
 		title: "Tytuł",
 		description:
 			"Z czasem pojawiły się w sieci archiwa tekstów klasycznych, religijnych, z zakresu historii, humanistyki, biblioteki poetyckie czy poświęcone wyłącznie twórczości kobiet. Oddzielną grupę stanowią elektroniczne wersje ency",
-		image: "/slide20.png",
+		image: "/installation.jpg",
 	},
 	{
 		id: 2,
 		title: "dwa",
 		description:
 			"Z czasem pojawiły się w sieci archiwa tekstów klasycznych, religijnych, z zakresu historii, humanistyki, biblioteki poetyckie czy poświęcone wyłącznie twórczości kobiet. Oddzielną grupę stanowią elektroniczne wersje ency",
-		image: vsvg,
+		image: "/installation2.jpg",
 	},
 	{
 		id: 3,
 		title: "trzy",
 		description:
 			"Z czasem pojawiły się w sieci archiwa tekstów klasycznych, religijnych, z zakresu historii, humanistyki, biblioteki poetyckie czy poświęcone wyłącznie twórczości kobiet. Oddzielną grupę stanowią elektroniczne wersje ency",
-		image: vsvg,
+		image: "/installation3.jpg",
 	},
 	{
 		id: 4,
@@ -56,7 +56,7 @@ const Project = (id, title, description, image) => {
 	return (
 		<div id={id} key={id} className="Project">
 			<div className="ProjectImgContainer">
-				<Image src={image} layout="fill" alt={title} />
+				<Image src={image} layout="fill" objectFit="contain" alt={title} />
 			</div>
 			<div className="ProjectContent">
 				<h4 style={{ zIndex: "100", position: "relative" }}>{title}</h4>

@@ -1,5 +1,6 @@
 import { Offerie } from "./comps/Offerie";
 import { ImgHolder } from "./comps/ImgHolder";
+import { useEffect, useState } from "react";
 const offer = [
 	{ title: "Smart Domy", desc: "Zajmujemy się instalacjami smart dom." },
 	{
@@ -25,8 +26,23 @@ const offer = [
 	},
 ];
 export const Offer = () => {
+	// const [SlideInStatus, setSlideInStatus] = useState(false);
+	// useEffect(() => {
+	// 	const el = document.getElementsByClassName("Offerie")[0];
+	// 	console.log(el);
+	// 	const observ = new IntersectionObserver(([entry]) => {
+	// 		console.log(entry.isIntersecting);
+	// 		setSlideInStatus(entry.isIntersecting), { root: el, threshold: 1.0 };
+	// 		// entry.isIntersecting ? observ.unobserve(el) : null;
+	// 	});
+	// 	observ.observe(el);
+	// }, []);
 	return (
-		<div id="Offer" className="Offer">
+		<div
+			id="Offer"
+			className="Offer"
+			// style={{ animation: SlideInStatus ? "slide-top 2s" : "none" }}
+		>
 			<ImgHolder src="/miernik.svg" className="OfferImg" />
 			<h1 className="Heading">Usługi elektryczne</h1>
 			<div>

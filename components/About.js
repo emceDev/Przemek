@@ -10,13 +10,13 @@ const things = [
 		id: 2,
 		title: "Elektrycy z doświadczeniem",
 		desc: "Nasi fachowcy od lat pracują w branży elektrycznej serwując kompleksowe uruchomienia, instalacje oraz naprawy awarii w zakresie elektryki.",
-		img: "/miernik.svg",
+		img: "/workers.jpg",
 	},
 	{
 		id: 3,
 		title: "Kontakt z fachowcem",
 		desc: "Bezpośredni i szybki kontakt telefoniczny lub mailowy z fachowcem w celu umówienia wizyty. tel email",
-		img: "/miernik.svg",
+		img: "/installation3.jpg",
 	},
 	{
 		id: 4,
@@ -51,7 +51,12 @@ export const Thingie = (props) => {
 				{/* asdasd */}
 				{/* <img src={props.img} layout="fill" /> */}
 				{/* <img src="/warszawa.svg" layout="fill" /> */}
-				<Image src={props.img} layout="fill" alt={props.title} />
+				<Image
+					src={props.img}
+					layout="fill"
+					alt={props.title}
+					objectFit="contain"
+				/>
 			</div>
 		</div>
 	);
