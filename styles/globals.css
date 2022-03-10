@@ -10,17 +10,17 @@
 	min-width: 100vw;
 }
 .Heading {
-	/* font-family: monospace; */
-
+	overflow: hidden;
 	font-weight: 700;
-	font-size: 96px;
+	font-size: 5vw;
 	line-height: 112px;
+	padding-left: 3vw;
 }
 .p {
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: 100;
-	font-size: 14px;
+	font-size: 1vw;
 	line-height: 40px;
 	display: flex;
 	align-items: center;
@@ -90,6 +90,7 @@ body {
 }
 .About {
 	position: relative;
+	overflow: hidden;
 	height: auto;
 	width: 100vw;
 	color: white;
@@ -99,31 +100,32 @@ body {
 	padding-bottom: 10vh;
 }
 .About .Heading {
-	padding-left: 7vw;
+	padding-left: 3vw;
 }
 .TContainer {
-	font-size: 19px;
+	/* font-size: 19px; */
 	/* padding: 9vh 40% 6vh 3vw; */
 	font-weight: bold;
 	/* background-color: green; */
 }
 .Thingie {
 	/* background-color: red; */
-	padding-bottom: 10vh;
+	padding-bottom: 6vh;
 	width: 100vw;
 	display: flex;
 }
 .TTitle {
-	padding: 2vh 2vw 5vh 6vw;
+	padding: 2vh 2vw 3vh 6vw;
+	font-size: 3vw;
 	/* background-color: violet; */
 	max-width: 50vw;
 }
 .TDesc {
-	padding: 3vh 7vw 1vh 10vw;
+	padding: 1vh 7vw 1vh 10vw;
 	width: 32vw;
 	/* max-width: 50%; */
 	line-height: 125%;
-	font-size: 2.3vw;
+	font-size: 1.5vw;
 	/* background-color: aquamarine; */
 }
 .TImg {
@@ -140,19 +142,19 @@ body {
 }
 .Offer {
 	position: relative;
-	min-height: auto;
-	padding-left: 10%;
+	/* min-height: auto; */
 	padding-bottom: 10vh;
 	color: #264eff;
+	/* padding-left: 10%; */
 }
-.Offer h1 {
-	font-size: 5.2vw;
-}
+
 .Offerie {
 	padding: 2vh;
+	padding-left: 10%;
 }
 .OfferieHead {
-	font-size: 3.5vw;
+	/* font-size: 3.5vw; */
+	font-size: 3vw;
 	line-height: 10vh;
 	width: fit-content;
 	background-color: rgb(220 210 210 / 94%);
@@ -163,7 +165,8 @@ body {
 	color: #266dd3;
 	padding: 2vh 5vw 2vh 5vw;
 	line-height: 120%;
-	font-size: 2.3vw;
+	/* font-size: 2.3vw; */
+	font-size: 1.5vw;
 	font-weight: 700;
 	background-color: rgb(220 210 210 / 94%);
 	/* filter: drop-shadow(1px 1px 1px rgb(58, 57, 57)); */
@@ -182,6 +185,7 @@ body {
 	color: white;
 	width: 100vw;
 	padding-top: 10vh;
+	padding-bottom: 10vh;
 	clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 96%);
 }
 .Projects .Heading {
@@ -208,17 +212,19 @@ body {
 	padding-bottom: 1%;
 }
 .Contact {
+	overflow: hidden;
 	color: #264eff;
+	font-size: 1vw;
 }
 
-.sc-iCfMLu.gZZBOx.rec.rec-pagination {
+/* .sc-iCfMLu.gZZBOx.rec.rec-pagination {
 	display: none;
-}
+} */
 @media only screen and (max-width: 600px) {
 	.Heading {
 		font-weight: 700;
-		font-size: 66px;
-		line-height: 80px;
+		font-size: 11vw;
+		line-height: 110%;
 	}
 	.Logo {
 		font-size: 4vw;
@@ -259,7 +265,9 @@ body {
 		padding-bottom: 10vh;
 		padding-top: 17vh;
 	}
-
+	.Offer .Heading {
+		padding-bottom: 5vh;
+	}
 	.TContainer {
 		padding: 1vh 0% 6vh 3vw;
 		font-weight: bold;
@@ -277,17 +285,17 @@ body {
 		justify-content: center;
 	}
 	.TTitle {
-		font-size: 7vw;
+		font-size: 8vw;
 		padding: 2vh 2vw 2vh 2vw;
-		max-width: 100%;
+		min-width: 100vw;
 		text-align: center;
 		/* background-color: violet; */
 	}
 	.TDesc {
-		padding: 3vh 7vw 1vh 7vw;
+		padding: 3vh 10vw 1vh 10vw;
 		line-height: 125%;
-		font-size: 4.3vw;
-		width: 50%;
+		font-size: 6vw;
+		width: 80vw;
 		margin: 0 auto;
 		text-align: center;
 		/* background-color: aquamarine; */
@@ -301,14 +309,17 @@ body {
 		padding-left: 2%;
 		padding-bottom: 13vh;
 		color: #264eff;
+		overflow: hidden;
 	}
 	.OfferieHead {
 		font-size: 10vw;
+		font-size: 8vw;
 		line-height: 10vw;
 	}
 	.OfferieDesc {
 		font-weight: 800;
-		font-size: 4vw;
+		font-size: 5vw;
+		padding-bottom: 0vw;
 	}
 	.OfferImg {
 		position: absolute;
@@ -318,6 +329,7 @@ body {
 		left: 25%;
 	}
 	.Projects {
+		overflow: hidden;
 		width: 100vw;
 		padding-top: 10vh;
 		padding-bottom: 10vh;
