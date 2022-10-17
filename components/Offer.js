@@ -26,28 +26,31 @@ const offer = [
 	},
 ];
 export const Offer = () => {
-	// const [SlideInStatus, setSlideInStatus] = useState(false);
-	// useEffect(() => {
-	// 	const el = document.getElementsByClassName("Offerie")[0];
-	// 	console.log(el);
-	// 	const observ = new IntersectionObserver(([entry]) => {
-	// 		console.log(entry.isIntersecting);
-	// 		setSlideInStatus(entry.isIntersecting), { root: el, threshold: 1.0 };
-	// 		// entry.isIntersecting ? observ.unobserve(el) : null;
-	// 	});
-	// 	observ.observe(el);
-	// }, []);
+	const appear = (target) => {
+		target.style.opacity = "1";
+	};
+	const observ = (el) => {
+		const observ = new IntersectionObserver(([entry]) => {
+			appear, { root: null, threshold: 1.0 };
+			entry.isIntersecting ? appear(entry.target) : null;
+		});
+		observ.observe(el);
+		return observ;
+	};
+	useEffect(() => {
+		offer.map((x) => {
+			observ(window.document.getElementById(x.title));
+		});
+	}, []);
 	return (
-		<div
-			id="Offer"
-			className="Offer"
-			// style={{ animation: SlideInStatus ? "slide-top 2s" : "none" }}
-		>
+		<div id="Offer" className="Offer">
 			<ImgHolder src="/miernik.svg" className="OfferImg" />
 			<h1 className="Heading">Usługi elektryczne</h1>
 			<div>
 				{offer.map((x) => {
-					return <Offerie title={x.title} desc={x.desc} key={x.title} />;
+					return (
+						<Offerie id={x.title} title={x.title} desc={x.desc} key={x.title} />
+					);
 				})}
 			</div>
 		</div>

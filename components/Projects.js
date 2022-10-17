@@ -59,7 +59,7 @@ const Project = (id, title, description, image) => {
 				<Image src={image} layout="fill" objectFit="contain" alt={title} />
 			</div>
 			<div className="ProjectContent">
-				<h4 style={{ zIndex: "100", position: "relative" }}>{title}</h4>
+				<h3 style={{ zIndex: "100", position: "relative" }}>{title}</h3>
 				<p style={{ color: "white", zIndex: "100", position: "relative" }}>
 					{description}
 				</p>

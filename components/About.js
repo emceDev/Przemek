@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useEffect, useState, useMemo } from "react";
 const things = [
 	{
 		id: 1,
@@ -32,7 +33,13 @@ export const About = () => {
 			<h1 className="Heading">O nas</h1>
 			<div className="TContainer">
 				{things.map((t) => (
-					<Thingie key={t.id} desc={t.desc} title={t.title} img={t.img} />
+					<Thingie
+						key={t.id}
+						id={"Thingie" + t.id}
+						desc={t.desc}
+						title={t.title}
+						img={t.img}
+					/>
 				))}
 			</div>
 			{/* <ImgHolder src="/team.png" className="AboutImg" /> */}
@@ -41,10 +48,30 @@ export const About = () => {
 };
 
 export const Thingie = (props) => {
+	const [hovered, setHovered] = useState(false);
+	useEffect(() => {
+		const el = window.document.getElementById(props.id);
+		let options = {
+			root: null,
+			rootMargin: "0px",
+			threshold: 0.9,
+		};
+		const observer = new IntersectionObserver((e) => {
+			// console.log("I m in", props.id, e[0].isIntersecting);
+			e[0].isIntersecting ? setHovered(true) : null;
+		}, options);
+		observer.observe(el);
+	}, []);
 	return (
-		<div className="Thingie">
+		<div
+			className={`Thingie ${hovered ? "hovered" : ""}`}
+			id={props.id}
+			// onMouseEnter={() => {
+			// 	setHovered(true);
+			// }}
+		>
 			<div>
-				<h1 className="TTitle">{props.title}</h1>
+				<h2 className="TTitle">{props.title}</h2>
 				<p className="TDesc">{props.desc}</p>
 			</div>
 			<div className="TImg">

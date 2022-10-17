@@ -11,16 +11,14 @@
 }
 .Heading {
 	overflow: hidden;
-	font-weight: 700;
-	font-size: 5vw;
-	line-height: 112px;
+	
 	padding-left: 3vw;
 }
 .p {
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: 100;
-	font-size: 1vw;
+	
 	line-height: 40px;
 	display: flex;
 	align-items: center;
@@ -28,7 +26,9 @@
 }
 
 body {
-	background-color: rgb(220 210 210 / 94%);
+	/* background-color: rgb(220 210 210 / 94%); */
+	background: white;
+	overflow-x: hidden;
 }
 .Logo * {
 	font-family: monospace;
@@ -36,7 +36,7 @@ body {
 .Logo {
 	position: relative;
 	color: #264eff;
-	font-size: 4vw;
+
 	height: 45vh;
 	padding-top: 20vh;
 	width: 80vw;
@@ -44,7 +44,13 @@ body {
 	/* padding-left: 5vw;
 	padding-bottom: 25vh; */
 	overflow: visible;
+	animation: appear 1.5s;
+	
 }
+@keyframes appear {
+	from {opacity: 0;}
+	to {opacity: 1;}
+  }
 .Logo h1 {
 	margin-left: 5vw;
 	/* margin-top: 10vh; */
@@ -62,39 +68,82 @@ body {
 .Navigation {
 	/* width: 70vw; */
 	position: sticky;
-	top: 10px;
-	/* background-color: yellow; */
+	top: 0px;
+	background-color: #264effe9;
 	z-index: 1000;
-	font-size: 30px;
+	
 	font-weight: bolder;
 	color: #266dd3;
-	min-height: 5vh;
+	height: 15vh;
 	display: flex;
-	width: fit-content;
-	margin-top: 10vh;
-	padding-left: 4vw;
+	/* width: fit-content; */
+	width: 100vw;
+	/* margin-top: 10vh; */
+	/* padding-left: 4vw; */
 	justify-content: space-evenly;
+	align-items: center;
 }
+
 .Navigation a {
 	/* color: red; */
-	color: #266dd3;
+	/* color: #266dd3; */
+	color:rgb(220, 210, 210);
 	text-decoration: none;
 }
-.Navigation a:visited {
-	color: #266dd3;
+.NavMid{
+	display: flex;
 }
-.Navigation div {
-	margin-left: 0.5vw;
+.NavMid div {
+	/* margin-left: 0.5vw; */
 	padding: 1vw;
-	background-color: #68cde1ad;
+
+	/* background-color: #68cde1ad; */
 }
+.Navigation a:visited {
+	/* color: #266dd3; */
+	color:rgb(220 210 210 / 94%);
+}
+.Hamburger{
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 160%;
+	
+  }.Switch{
+	display: flex;
+	margin-right: 20px;
+	z-index: 30;
+   
+   
+	
+  }
+.Switch div:nth-of-type(2){
+	transform:rotate(90deg) matrix(1, 0, 0, 2, 2, -2);
+	font-size: 50%;
+	
+  }
+.Switch div{
+	color:white;
+  }
+  .HambList{
+	position: absolute;
+	background-color: white;
+  }
+  .HambList div{
+	width: 110%;
+	color:#264effe9;
+  }
+  .HambList div:hover{
+	background-color: #EEEEEE
+  }
 .About {
 	position: relative;
 	overflow: hidden;
 	height: auto;
 	width: 100vw;
 	color: white;
-	background-image: linear-gradient(#2facff, #264eff);
+	background-image: linear-gradient(#264effe9, #264eff);
 	clip-path: polygon(0 0, 100vw 17vh, 100% 100%, 0 96%);
 	padding-top: 25vh;
 
@@ -107,7 +156,6 @@ body {
 	padding-left: 3vw;
 }
 .TContainer {
-	/* font-size: 19px; */
 	/* padding: 9vh 40% 6vh 3vw; */
 	font-weight: bold;
 	/* background-color: green; */
@@ -115,7 +163,7 @@ body {
 .Thingie {
 	/* background-color: red; */
 	padding-bottom: 6vh;
-	min-height: 20vh;
+	min-height: 40vh;
 	width: 100vw;
 	display: flex;
 	transition: all 0.5s ease-in-out;
@@ -123,20 +171,20 @@ body {
 
 .TTitle {
 	padding: 2vh 2vw 3vh 6vw;
-	font-size: 3vw;
 	/* background-color: violet; */
 	transition: all 0.8s ease;
 	max-width: 50vw;
 	transition-delay: 1s;
 }
+
 @media only screen and (min-width: 900px) {
-	.Thingie:hover {
+	.Thingie.hovered{
 		min-height: 50vh;
 	}
-	.Thingie:hover .TDesc {
+	.Thingie.hovered .TDesc {
 		padding: 10vh 7vw 1vh 10vw;
 	}
-	.Thingie:hover .TTitle {
+	.Thingie.hovered .TTitle {
 		padding: 4vh 1vw 1vh 7vw;
 	}
 }
@@ -145,7 +193,6 @@ body {
 	padding: 1vh 7vw 1vh 10vw;
 	width: 32vw;
 	line-height: 125%;
-	font-size: 1.5vw;
 	transition: all 0.8s ease;
 	/* background-color: aquamarine; */
 }
@@ -182,26 +229,24 @@ body {
 	}
 }
 .Offerie {
-	padding: 2vh;
+	margin-top: 2vh;
 	padding-left: 10%;
+	background: white;
+	opacity: 0;
+	transition: opacity ease-out 0.5s;
 }
 .OfferieHead {
-	/* font-size: 3.5vw; */
-	font-size: 3vw;
-	line-height: 10vh;
 	width: fit-content;
-	background-color: rgb(220 210 210 / 94%);
+	/* background-color: rgb(220 210 210 / 94%); */
+	background: white;
 	z-index: 1000;
 	margin-bottom: 1vh;
 }
 .OfferieDesc {
 	color: #266dd3;
 	padding: 2vh 5vw 2vh 5vw;
-	line-height: 120%;
-	/* font-size: 2.3vw; */
-	font-size: 1.5vw;
-	font-weight: 700;
-	background-color: rgb(220 210 210 / 94%);
+	/* background-color: rgb(220 210 210 / 94%); */
+	background: white;
 	/* filter: drop-shadow(1px 1px 1px rgb(58, 57, 57)); */
 }
 .OfferImg {
@@ -247,16 +292,22 @@ body {
 .Contact {
 	overflow: hidden;
 	color: #264eff;
-	font-size: 1vw;
 }
 
 /* .sc-iCfMLu.gZZBOx.rec.rec-pagination {
 	display: none;
 } */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
+	h1{font-size: 8vw;
+	line-height: 100%;}
+	h2{
+		font-size: 6vw;
+	}
+	p{font-size: 4vw;
+		font-weight: 400;
+		line-height: 125%;}
 	.Heading {
-		font-weight: 700;
-		font-size: 11vw;
+		
 		line-height: 110%;
 	}
 	.Logo {
@@ -284,15 +335,16 @@ body {
 	.Navigation {
 		padding-left: 0%;
 		min-height: fit-content;
-		font-size: 5vw;
+		font-size: 18px;
 		font-weight: 900;
 		width: 100vw;
 		/* background-color: red; */
 	}
-	.Navigation div {
-		padding: 2vh 1vw 2vh 1vw;
-		background-color: #fffffff6;
+	.NavLogo {
+		font-size: 35px;
 	}
+	
+
 	.About {
 		clip-path: polygon(0 0, 100% 13vh, 100% 100%, 0 90%);
 		padding-bottom: 10vh;
@@ -319,16 +371,15 @@ body {
 		justify-content: center;
 	}
 	.TTitle {
-		font-size: 8vw;
+	
 		padding: 2vh 2vw 2vh 2vw;
 		min-width: 100vw;
 		text-align: center;
 		/* background-color: violet; */
 	}
 	.TDesc {
-		padding: 3vh 10vw 1vh 10vw;
-		line-height: 125%;
-		font-size: 6vw;
+		padding: 3vh 10vw 5vh 10vw;
+	
 		width: 80vw;
 		margin: 0 auto;
 		text-align: center;
@@ -345,14 +396,8 @@ body {
 		color: #264eff;
 		overflow: hidden;
 	}
-	.OfferieHead {
-		font-size: 10vw;
-		font-size: 8vw;
-		line-height: 10vw;
-	}
+
 	.OfferieDesc {
-		font-weight: 800;
-		font-size: 5vw;
 		padding-bottom: 0vw;
 	}
 	.OfferImg {
@@ -407,3 +452,95 @@ body {
 		left: 0;
 	} */
 }
+@media only screen and (min-width: 768px) {
+	.Heading{
+	font-weight: 700;
+	font-size: 5vw;
+line-height: 88px;
+}
+h2{
+	font-weight: 600;
+	font-size: 4vw;
+	line-height: 40px;
+}
+h3{
+	font-size: 4vw;
+}
+p{
+	font-weight: 200;
+font-size: 2.3vw;
+line-height: 40px;
+}
+
+.Logo{
+	font-size: 4vw;
+height: 45vh;
+padding-top: 30vh;
+width: 96vw;
+}
+.Navigation{
+	font-size: 17px;
+	justify-content: space-around;
+}
+.NavLogo{
+font-size: 30px;
+}
+
+.OfferieHead{
+/* font-size: 3vw; */
+line-height: 10vh;
+}
+.OfferieDesc{
+line-height: 120%;
+/* font-size: 1.5vw; */
+font-weight: 700;
+}
+.Contact{
+font-size: 1vw;
+}}
+ 
+@media only screen and (min-width: 900px) {
+	.Heading{
+	font-weight: 700;
+	font-size: 5vw;
+line-height: 112px;
+}
+h2{
+	font-weight: 100;
+	font-size: 4vw;
+	line-height: 125%;
+}
+h3{
+	font-size: 4vw;
+}
+p{
+	font-weight: 100;
+font-size: 2vw;
+line-height: 40px;
+}
+
+.Logo{
+	font-size: 4vw;
+height: 45vh;
+padding-top: 20vh;
+width: 80vw;
+}
+.Navigation{
+	font-size: 15px;
+}
+.NavLogo{
+font-size: 30px;
+}
+
+.OfferieHead{
+/* font-size: 3vw; */
+line-height: 10vh;
+}
+.OfferieDesc{
+line-height: 120%;
+/* font-size: 1.5vw; */
+font-weight: 700;
+}
+.Contact{
+font-size: 1vw;
+}}
